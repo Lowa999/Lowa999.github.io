@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOWA — Bibliothèque numérique</title>
+</head>
+
+<body>
+  <h1>LOWA</h1>
+
+  <h2>Bibliothèque numérique</h2>
+
+  <p>Livres, pensées, conscience et philosophie.</p>
+
+  <h2>Bienvenue</h2>
+
+  <p>
+    Découvrez les livres et les œuvres publiés sur LOWA.
+  </p>
+
+  <h2>Mes livres</h2>
+
+  <p>Les premiers livres seront bientôt disponibles.</p>
+
+  <h2>À propos</h2>
+
+  <p>
+    LOWA est un espace consacré aux livres, aux idées et à la réflexion.
+  </p>
+
+  <p>© 2026 LOWA</p>
+</body>
+</html>
