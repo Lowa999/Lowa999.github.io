@@ -1,34 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>LOWA — Bibliothèque numérique</title>
+  <meta name="description" content="LOWA — bibliothèque numérique dédiée aux livres, aux idées et à la réflexion. Découvrez des ouvrages, des pensées et des ressources en ligne." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0d47a1" />
+
+  <!-- Open Graph (for social previews) -->
+  <meta property="og:title" content="LOWA — Bibliothèque numérique" />
+  <meta property="og:description" content="Bibliothèque numérique dédiée aux livres, aux idées et à la réflexion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lowa999.github.io/" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Basic structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LOWA",
+    "url": "https://lowa999.github.io/"
+  }
+  </script>
+
+  <!-- Minimal inline styles for clarity; move to external CSS for production -->
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --accent: #0d47a1;
+      --muted: #6b7280;
+      --max-width: 980px;
+      --gap: 1rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body { height:100%; margin:0; background:var(--bg); color:var(--text); }
+    .container { max-width:var(--max-width); margin:0 auto; padding:1.5rem; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:var(--gap); }
+    header h1 { margin:0; font-size:1.25rem; color:var(--accent); }
+    nav a { color:var(--accent); text-decoration:none; margin-left:0.75rem; }
+    .hero { margin-top:1rem; padding:1.25rem; border-radius:8px; background:#f8fafc; }
+    .hero p { margin:0; color:var(--muted); }
+    section { margin-top:1.25rem; }
+    footer { margin-top:2rem; padding-top:1rem; border-top:1px solid #e6e6e6; color:var(--muted); font-size:.9rem; }
+    .books-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:.75rem; }
+    .book { padding:0.75rem; border:1px solid #eef2ff; border-radius:6px; background:white; }
+    .skip-link {
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus { position:static; width:auto; height:auto; padding:.5rem; background:#000; color:#fff; z-index:1000; }
+    @media (prefers-reduced-motion: no-preference) {
+      * { transition: color .12s ease, background-color .12s ease; }
+    }
+  </style>
 </head>
-
 <body>
-  <h1>LOWA</h1>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
 
-  <h2>Bibliothèque numérique</h2>
+  <div class="container" role="document">
+    <header role="banner" aria-label="En-tête du site LOWA">
+      <h1>LOWA</h1>
+      <nav aria-label="Navigation principale">
+        <a href="#livres">Mes livres</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <p>Livres, pensées, conscience et philosophie.</p>
+    <main id="main-content" role="main" aria-labelledby="welcome-heading">
+      <section class="hero" aria-labelledby="welcome-heading">
+        <h2 id="welcome-heading">Bibliothèque numérique</h2>
+        <p>Livres, pensées, conscience et philosophie — découvrez des ouvrages et des réflexions publiés sur LOWA.</p>
+      </section>
 
-  <h2>Bienvenue</h2>
+      <section id="livres" aria-labelledby="livres-heading">
+        <h3 id="livres-heading">Mes livres</h3>
+        <p>Les premiers livres seront bientôt disponibles. Voici quelques rubriques prévues :</p>
+        <div class="books-list" aria-live="polite">
+          <article class="book" aria-labelledby="b1">
+            <h4 id="b1">Essais &amp; réflexions</h4>
+            <p class="muted">Pensées et essais sur la conscience et la philosophie.</p>
+          </article>
+          <article class="book" aria-labelledby="b2">
+            <h4 id="b2">Anthologies</h4>
+            <p class="muted">Recueils thématiques et lectures commentées.</p>
+          </article>
+        </div>
+      </section>
 
-  <p>
-    Découvrez les livres et les œuvres publiés sur LOWA.
-  </p>
+      <section id="a-propos" aria-labelledby="apropos-heading">
+        <h3 id="apropos-heading">À propos</h3>
+        <p>LOWA est un espace consacré aux livres, aux idées et à la réflexion. Objectif : partager des textes, des analyses et des ressources pour stimuler la pensée critique.</p>
+      </section>
 
-  <h2>Mes livres</h2>
+      <section id="contact" aria-labelledby="contact-heading">
+        <h3 id="contact-heading">Contact</h3>
+        <p>Pour proposer un livre ou me contacter : <a href="mailto:contact@lowa.example" rel="noopener noreferrer">contact@lowa.example</a></p>
+      </section>
+    </main>
 
-  <p>Les premiers livres seront bientôt disponibles.</p>
-
-  <h2>À propos</h2>
-
-  <p>
-    LOWA est un espace consacré aux livres, aux idées et à la réflexion.
-  </p>
-
-  <p>© 2026 LOWA</p>
+    <footer role="contentinfo">
+      <p>© 2026 LOWA — <a href="/privacy.html">Politique de confidentialité</a></p>
+    </footer>
+  </div>
 </body>
 </html>
