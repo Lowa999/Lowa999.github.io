@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOWA — Bibliothèque numérique</title>
+    <meta name="description" content="LOWA - Bibliothèque numérique pour présenter et vendre vos livres.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="theme-color" content="#0d47a1">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "LOWA",
+        "url": "https://lowa999.github.io/"
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --texte: #111827;
+            --accent: #0d47a1;
+            --muted: #6b7280;
+            --max-width: 980px;
+            --écart: 1rem;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html, body { height: 100%; margin: 0; background-color: var(--bg); color: var(--texte); }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--écart); }
+        header { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; }
+        .titre h1 { margin: 0; font-size: 1.25rem; color: var(--accent); }
+        nav a { color: var(--accent); text-decoration: none; margin-left: var(--écart); }
+        .hero { margin-top: 1rem; padding: 1.25rem 0; }
+        .hero h2 { margin: 0; font-size: 2rem; }
+        .hero p { margin: 0.5rem 0 0; color: var(--muted); }
+        section { margin-top: 1.25rem; }
+        .pied-de-page { margin-top: 2rem; padding: 1rem 0; text-align: center; color: var(--muted); font-size: 0.875rem; }
+        .books-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+        .book { padding: 0.75rem; border: 1px solid #eef2ff; border-radius: 8px; }
+        
+        .skip-link {
+            position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+        }
+        .skip-link:focus { position: static; width: auto; height: auto; padding: 6px; background: var(--accent); color: white; }
+
+        @media (prefers-reduced-motion: no-preference) {
+            * { transition: color .12s ease, background-color .12s ease; }
+        }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <div class="container">
+        <header role="banner">
+            <div class="titre">
+                <h1>LOWA</h1>
+            </div>
+            <nav aria-label="Navigation principale">
+                <a href="#livres">Mes livres</a>
+                <a href="#a-propos">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main id="main-content" role="main">
+            <section class="hero" aria-labelledby="welcome-heading">
+                <h2 id="welcome-heading">Bibliothèque numérique LOWA</h2>
+                <p>Livres, pensées, conscience et philosophie.</p>
+            </section>
+
+            <section id="livres" aria-labelledby="livres-heading">
+                <h3 id="livres-heading">Mes livres</h3>
+                <p>Les premiers livres seront bientôt disponibles à l'achat et en extraits.</p>
+                <div class="books-list" aria-live="polite">
+                    <article class="book">
+                        <h4>Qui sommes-nous vraiment ?</h4>
+                        <p class="muted">Pensées et essais philosophiques.</p>
+                        <p><strong>À venir</strong></p>
+                    </article>
+                    <article class="book">
+                        <h4>Anthologies</h4>
+                        <p class="muted">Recueils thématiques.</p>
+                        <p><strong>À venir</strong></p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="a-propos" aria-labelledby="a-propos-heading">
+                <h3 id="a-propos-heading">À propos</h3>
+                <p>LOWA est un espace consacré aux livres et aux réflexions philosophiques.</p>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-heading">
+                <h3 id="contact-heading">Contact</h3>
+                <p>Pour proposer un livre ou me contacter, écrivez-moi.</p>
+            </section>
+        </main>
+
+        <footer role="contentinfo" class="pied-de-page">
+            <p>&copy; 2026 LOWA - <a href="/privacy.html" style="color: var(--muted);">Confidentialité</a></p>
+        </footer>
+    </div>
+
+</body>
+  </html>
+                  
