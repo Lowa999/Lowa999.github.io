@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOWA — Cultiver la beauté, l'esprit et l'avenir</title>
+  <style>
+    :root {
+      --primary: #1b4332;
+      --accent: #d4af37;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --text: #1a1a1a;
+      --text-muted: #4a5568;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Animation du ciel (Jour / Nuit / Aube / Crépuscule) */
+    @keyframes skyCycle {
+      0%   { background-color: #0b1d3a; } /* Nuit profonde */
+      25%  { background-color: #ff7e5f; } /* Lever du soleil (Aube) */
+      50%  { background-color: #87ceeb; } /* Plein jour */
+      75%  { background-color: #feb47b; } /* Coucher du soleil */
+      100% { background-color: #0b1d3a; } /* Retour à la nuit */
+    }
+
+    /* Trajectoire et lueur du Soleil / Lune */
+    @keyframes celestialBody {
+      0% {
+        transform: translate(-100px, 80vh) scale(0.8);
+        background: radial-gradient(circle, #fbf8cc 20%, #fde4cf 60%, rgba(255,255,255,0) 100%);
+        box-shadow: 0 0 40px rgba(251, 248, 204, 0.6);
+      }
+      50% {
+        transform: translate(calc(50vw - 60px), 10vh) scale(1.3);
+        background: radial-gradient(circle, #ffb703 20%, #fd9e02 60%, rgba(255,183,3,0) 100%);
+        box-shadow: 0 0 80px rgba(255, 183, 3, 0.9);
+      }
+      100% {
+        transform: translate(calc(100vw + 100px), 80vh) scale(0.8);
+        background: radial-gradient(circle, #fbf8cc 20%, #fde4cf 60%, rgba(255,255,255,0) 100%);
+        box-shadow: 0 0 40px rgba(251, 248, 204, 0.6);
+      }
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      animation: skyCycle 24s infinite ease-in-out;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Élément céleste animé (Soleil/Lune) */
+    .celestial {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: celestialBody 24s infinite ease-in-out;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      background: rgba(27, 67, 50, 0.85);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .intro h2 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(6px);
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--accent);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+      font-size: 1.3rem;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(15, 40, 30, 0.95);
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Astre animé (Soleil / Lune) -->
+  <div class="celestial"></div>
+
+  <header>
+    <h1>LOWA</h1>
+    <p>Cultiver la beauté, l'esprit et l'avenir</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Un écosystème multidimensionnel</h2>
+      <p>LOWA réunit produits, savoirs, culture, philosophie, environnement et entrepreneuriat.</p>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Cosmétiques</h3>
+        <p>Soins corporels et produits naturels issus de la biodiversité (karité, savon noir, huiles de coco et d'avocat).</p>
+      </div>
+      <div class="card">
+        <h3>2. Bien-être</h3>
+        <p>Conseils d'équilibre de vie, soins quotidiens et harmonie avec la nature.</p>
+      </div>
+      <div class="card">
+        <h3>3. Philosophie</h3>
+        <p>Réflexions autonomes sur l'existence et développement de la pensée du « Philosophe des opprimés ».</p>
+      </div>
+      <div class="card">
+        <h3>4. Histoire & Culture</h3>
+        <p>Valorisation des traditions, des récits, du patrimoine et des savoirs africains.</p>
+      </div>
+      <div class="card">
+        <h3>5. Environnement</h3>
+        <p>Engagement pour la biodiversité, les forêts, l'eau et le développement durable.</p>
+      </div>
+      <div class="card">
+        <h3>6. Livres & Éditions</h3>
+        <p>Création de carnets, essais et ouvrages dédiés à la jeunesse et aux idées fortes.</p>
+      </div>
+      <div class="card">
+        <h3>7. Entrepreneuriat</h3>
+        <p>Guides pratiques sur la création d'activité, le marketing et le développement de compétences.</p>
+      </div>
+      <div class="card">
+        <h3>8. Partenariats</h3>
+        <p>Espace de collaboration avec créateurs, associations, ONG et institutions.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LOWA — Tous droits réservés.</p>
+  </footer>
+
+</body>
+  </html>
+  
