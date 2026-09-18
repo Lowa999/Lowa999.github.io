@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # Collection : Pensée du Jour
+  - name: "pensees"
+    label: "Pensée du jour"
+    folder: "content/pensees"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-pensee"
+    fields:
+      - { label: "Titre / Thème", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Citation / Pensée", name: "body", widget: "markdown" }
+
+  # Collection : Produits Cosmétiques
+  - name: "cosmetiques"
+    label: "Cosmétiques & Soins"
+    folder: "content/cosmetiques"
+    create: true
+    fields:
+      - { label: "Nom du produit", name: "title", widget: "string" }
+      - { label: "Prix ($)", name: "price", widget: "string" }
+      - { label: "Image du produit", name: "image", widget: "image" }
+      - { label: "Description & Bienfaits", name: "body", widget: "markdown" }
+
+  # Collection : Livres & Ouvrages
+  - name: "livres"
+    label: "Bibliothèque & Livres"
+    folder: "content/livres"
+    create: true
+    fields:
+      - { label: "Titre du livre", name: "title", widget: "string" }
+      - { label: "Auteur", name: "author", widget: "string" }
+      - { label: "Catégorie", name: "category", widget: "select", options: ["Essai & Philosophie", "Ésotérisme & Spiritualité", "Anthologies"] }
+      - { label: "Prix ($)", name: "price", widget: "string" }
+      - { label: "Image de couverture", name: "cover", widget: "image" }
+      - { label: "Extrait / Résumé", name: "body", widget: "markdown" }
