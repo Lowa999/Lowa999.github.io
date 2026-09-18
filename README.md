@@ -1,2 +1,2 @@
-# Lowa999.github.io
-LOWA — Éditions numériques, livres, pensées et œuvres philosophiques.
+# lowa univers.io
+Bienvenue dans l'univers LOWA — Cultiver la beauté, l'esprit et l'avenir. »
