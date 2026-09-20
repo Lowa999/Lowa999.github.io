@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOWA — Une marque, plusieurs univers</title>
+    <meta name="description" content="Plateforme officielle de LOWA : Cosmétiques, Spirit, Énergies & Innovations, Services Techniques et Littérature.">
+    
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#hero" class="logo-container">
+                <!-- Emplacement Logo Officiel -->
+                <img src="images/logo-lowa.png" alt="Logo LOWA" class="site-logo" onerror="this.style.display='none'; document.getElementById('alt-logo-text').style.display='block';">
+                <div id="alt-logo-text" class="logo-text-fallback" style="display:none;">
+                    <span class="logo-title">LOWA</span>
+                    <span class="logo-sub">Plusieurs Univers</span>
+                </div>
+            </a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#cosmetiques" class="nav-link">Cosmétiques</a></li>
+                <li><a href="#spirit" class="nav-link">Spirit</a></li>
+                <li><a href="#energies" class="nav-link">Énergies</a></li>
+                <li><a href="#tech" class="nav-link">Services Tech</a></li>
+                <li><a href="#litterature" class="nav-link">Littérature</a></li>
+                <li><a href="#payment-delivery" class="nav-link">Paiement & Envoi</a></li>
+                <li><a href="#contact" class="nav-link btn-nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <span class="badge-hero">Marque Mère Pluridisciplinaire</span>
+            <h1>Bienvenue chez <span>LOWA</span></h1>
+            <p class="hero-tagline">« Une marque, plusieurs univers. »</p>
+            <p class="hero-desc">
+                LOWA réunit la beauté naturelle, le bien-être, la spiritualité, l'énergie solaire, l'innovation technique et la littérature au sein d'une même vision créative.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" onclick="openWhatsApp('Bonjour LOWA, je souhaite découvrir vos produits et services.')">
+                    <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+                </button>
+                <a href="#about" class="btn btn-outline"><i class="fas fa-compass"></i> En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation par Univers (Cartes) -->
+    <section class="section-padding univers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Branches & Univers</h2>
+                <p>Découvrez la diversité de nos domaines d'expertise</p>
+            </div>
+            <div class="univers-grid">
+                <div class="univers-card" onclick="location.href='#cosmetiques'">
+                    <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Cosmétiques</h3>
+                    <p>Soins corporels, huiles pures, savons artisanaux et parfums.</p>
+                    <span class="btn-card">Explorer <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="univers-card" onclick="location.href='#spirit'">
+                    <div class="card-icon"><i class="fas fa-spa"></i></div>
+                    <h3>LOWA Spirit</h3>
+                    <p>Conseils bien-être, accompagnement et parfums spirituels.</p>
+                    <span class="btn-card">Explorer <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="univers-card" onclick="location.href='#energies'">
+                    <div class="card-icon"><i class="fas fa-solar-panel"></i></div>
+                    <h3>Énergies & Innovations</h3>
+                    <p>Panneaux solaires, autonomie électrique et projets d'avenir.</p>
+                    <span class="btn-card">Explorer <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="univers-card" onclick="location.href='#tech'">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Services Techniques</h3>
+                    <p>Réparation de machines à laver, dépannage et électricité.</p>
+                    <span class="btn-card">Explorer <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="univers-card" onclick="location.href='#litterature'">
+                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>LOWA Littérature</h3>
+                    <p>Livres, œuvres écrites, réflexions philosophiques et essais.</p>
+                    <span class="btn-card">Explorer <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="about" class="section-padding about-section light-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Notre Vision</span>
+                <h2>À Propos de LOWA</h2>
+            </div>
+            <div class="about-content">
+                <p>LOWA est une marque dynamique fondée sur l'authenticité, la polyvalence et la recherche constante de solutions adaptées à notre communauté. De la fabrication de soins naturels aux installations énergétiques, nous garantissons professionnalisme et proximité.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section LOWA Cosmétiques -->
+    <section id="cosmetiques" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Beauté & Soins Naturels</span>
+                <h2>LOWA Cosmétiques & Parfums</h2>
+                <p>Produits naturels préparés avec soin. Filtrez par catégorie :</p>
+            </div>
+
+            <!-- Filtres Dynamiques Cosmétiques -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterCosmetics('all')">Tous</button>
+                <button class="filter-btn" onclick="filterCosmetics('cremes-beurres')">Crèmes & Beurres</button>
+                <button class="filter-btn" onclick="filterCosmetics('huiles')">Huiles Naturelles</button>
+                <button class="filter-btn" onclick="filterCosmetics('savons')">Savons</button>
+                <button class="filter-btn" onclick="filterCosmetics('parfums-cosmo')">Parfums Cosmétiques</button>
+                <button class="filter-btn" onclick="filterCosmetics('parfums-spirit')">Parfums Spirituels</button>
+            </div>
+
+            <!-- Conteneur Injecté par JavaScript -->
+            <div class="products-grid" id="cosmetics-container">
+                <!-- Injecté automatiquement via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section LOWA Spirit -->
+    <section id="spirit" class="section-padding light-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Bien-être & Conscience</span>
+                <h2>LOWA Spirit</h2>
+            </div>
+            <div class="spirit-grid">
+                <div class="spirit-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Conseils Beauté & Bien-être</h3>
+                    <p>La majorité de nos conseils d'entretien et d'hygiène corporelle sont gratuits.</p>
+                    <span class="badge-tag green">Gratuit</span>
+                </div>
+                <div class="spirit-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Consultations & Orientations</h3>
+                    <p>Accompagnement personnalisé selon les prestations et la durée sollicitée.</p>
+                    <span class="badge-tag gold">Sur Devis</span>
+                </div>
+                <div class="spirit-card">
+                    <i class="fas fa-ankh"></i>
+                    <h3>Gamme Traditionnelle & Spirituelle</h3>
+                    <p>Produits associés à certaines pratiques traditionnelles ou symboliques.</p>
+                    <small class="disclaimer-inline">Ces produits ne constituent en aucun cas des traitements médicaux.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section LOWA Énergies & Innovations -->
+    <section id="energies" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Autonomie & Progrès</span>
+                <h2>LOWA Énergies & Innovations</h2>
+            </div>
+            <div class="energies-box">
+                <p class="quote-text">« LOWA développe progressivement des solutions liées à l'énergie, à l'électricité et à l'innovation, adaptées aux besoins de ses clients et partenaires. »</p>
+                <div class="energies-features">
+                    <div class="ef-item"><i class="fas fa-sun"></i> Installation de panneaux solaires</div>
+                    <div class="ef-item"><i class="fas fa-battery-full"></i> Petites solutions d'autonomie énergétique</div>
+                    <div class="ef-item"><i class="fas fa-bolt"></i> Solutions électriques durables</div>
+                    <div class="ef-item"><i class="fas fa-lightbulb"></i> Projets technologiques en développement</div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-primary" onclick="openWhatsApp('Bonjour LOWA, je souhaite demander un devis pour une installation solaire ou une solution énergétique.')">
+                        <i class="fas fa-file-invoice"></i> Demander un devis Énergie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section LOWA Services Techniques -->
+    <section id="tech" class="section-padding light-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Dépannage & Maintenance</span>
+                <h2>LOWA Services Techniques</h2>
+                <p>Chaque intervention fait l'objet d'un devis personnalisé selon la distance, les matériaux et la puissance requise.</p>
+            </div>
+            
+            <div class="tech-grid" id="tech-container">
+                <!-- Injecté par script.js -->
+            </div>
+
+            <div class="center-actions" style="margin-top: 30px; text-align: center;">
+                <button class="btn btn-primary" onclick="openWhatsApp('Bonjour LOWA Services Techniques, voici mon besoin : ')">
+                    <i class="fas fa-wrench"></i> Décrire mon problème / Demander un devis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section LOWA Littérature -->
+    <section id="litterature" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Culture & Pensée</span>
+                <h2>LOWA Littérature</h2>
+                <p>Livres disponibles, œuvres écrites par LOWA et réflexions philosophiques.</p>
+            </div>
+
+            <div class="books-grid" id="books-container">
+                <!-- Injecté par script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Paiement & Livraison -->
+    <section id="payment-delivery" class="section-padding light-bg">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Contact & WhatsApp -->
+                <div class="info-card">
+                    <div class="info-icon green-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Contact & Commandes</h3>
+                    <p>Pour commander, demander un devis ou poser une question :</p>
+                    <p class="phone-highlight">+243 972 031 790</p>
+                    <button class="btn btn-sm btn-primary" onclick="openWhatsApp('Bonjour LOWA, je souhaite discuter de mes besoins.')">Discuter sur WhatsApp</button>
+                </div>
+
+                <!-- Orange Money -->
+                <div class="info-card">
+                    <div class="info-icon orange-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Paiement Orange Money</h3>
+                    <p>Uniquement pour le règlement de vos achats après confirmation :</p>
+                    <p class="phone-highlight">+243 893 246 210</p>
+                    <small class="notice-text"><i class="fas fa-info-circle"></i> Votre commande sera vérifiée manuellement par notre équipe après réception du transfert.</small>
+                </div>
+
+                <!-- E-mail -->
+                <div class="info-card">
+                    <div class="info-icon blue-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Courrier Électronique</h3>
+                    <p>Pour vos demandes formelles ou propositions de partenariat :</p>
+                    <p class="email-highlight">gmail.artinantera@gmail.com</p>
+                    <a href="mailto:gmail.artinantera@gmail.com" class="btn btn-sm btn-outline">Envoyer un E-mail</a>
+                </div>
+            </div>
+
+            <div class="delivery-banner">
+                <i class="fas fa-truck"></i>
+                <div>
+                    <h4>Frais et modalités de transport</h4>
+                    <p>Base indicative : à partir d'environ <strong>6 000 FC</strong> selon le trajet. Les frais de transport exacts sont à confirmer selon votre destination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="images/logo-lowa.png" alt="Logo LOWA" class="footer-logo" onerror="this.style.display='none';">
+                <h3>LOWA</h3>
+                <p>« Une marque, plusieurs univers. »</p>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2026 LOWA. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton Flottant WhatsApp -->
+    <a href="javascript:void(0)" class="whatsapp-float" onclick="openWhatsApp('Bonjour LOWA, je vous contacte depuis le site web.')" aria-label="WhatsApp LOWA">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+              </html>
+  
